@@ -1,7 +1,6 @@
 package com.lm.pos.dayclose;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ public class DaycloseService {
 	
 	
 	public List<Dayclose> getAllDayclose(){
-		List<Dayclose> dayclose = new ArrayList();
+		List<Dayclose> dayclose = new ArrayList<Dayclose>();
 		daycloseRepository.findAll()
 		.forEach(dayclose::add);
 		return dayclose;

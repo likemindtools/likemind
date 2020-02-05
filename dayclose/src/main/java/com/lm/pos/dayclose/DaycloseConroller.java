@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
+@RequestMapping("/dayclose")
 public class DaycloseConroller {
 
 	@Autowired
@@ -20,27 +21,27 @@ public class DaycloseConroller {
 	@Autowired
 	RestTemplate rest;
 	
-	@RequestMapping("/dayclose")
-	public List<Dayclose> geAllDayclose(){
+	@RequestMapping("/")
+	public List<Dayclose> getAllDayclose(){
 		return daycloseService.getAllDayclose();
 	}
 	
-	@RequestMapping("/dayclose/{id}")
+	@RequestMapping("/{id}")
 	public Dayclose getDayclose(@PathVariable Integer id){
 		return daycloseService.getDayclose(id);
 	}
 	
-	@RequestMapping(method=RequestMethod.POST,value="/dayclose")
+	@RequestMapping(method=RequestMethod.POST,value="/")
 	public void addDayclose(@RequestBody Dayclose dayclose){
 		daycloseService.addDayclose(dayclose);
 	}
 	
-	@RequestMapping(method=RequestMethod.PUT,value="/dayclose/{id}")
+	@RequestMapping(method=RequestMethod.PUT,value="/{id}")
 	public void updateDayclose(@PathVariable Integer id,@RequestBody Dayclose dayclose){
 		daycloseService.updateDayclose(id,dayclose);
 	}
 
-	@RequestMapping(method=RequestMethod.DELETE,value="/dayclose/{id}")
+	@RequestMapping(method=RequestMethod.DELETE,value="/{id}")
 	public String deleteDayclose(@PathVariable Integer id){
 		return daycloseService.deleteDayclose(id);
 	}
