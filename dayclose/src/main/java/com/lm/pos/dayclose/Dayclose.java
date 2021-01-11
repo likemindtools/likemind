@@ -1,5 +1,5 @@
 package com.lm.pos.dayclose;
-
+// test bean
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
