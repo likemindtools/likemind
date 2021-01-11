@@ -1,4 +1,7 @@
 package com.lm.expense;
 
-public class ExpenseRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface ExpenseRepository extends CrudRepository<Expensedetails,Integer> {
+
 }

@@ -9,3 +9,5 @@ CREATE TABLE expensedetails (
   date date NOT NULL,
   PRIMARY KEY (id)
 );
+
+select * from expensedetails;
