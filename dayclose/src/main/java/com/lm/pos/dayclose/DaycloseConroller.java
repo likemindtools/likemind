@@ -47,7 +47,7 @@ public class DaycloseConroller {
 	}
 	
 	@RequestMapping("/rest/{id}")
-	public Dayclose callRestAPIbyId(@PathVariable Integer id) {
+	public Dayclose callRestAPIbyId(@PathVariable Integer id) {		
 		Dayclose dc=rest.getForObject("http://localhost:8500/dayclose/"+id, Dayclose.class);
 		System.out.println(dc.toString());
 		return dc;

@@ -2,6 +2,8 @@ package com.lm.pos.dayclose;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Dayclose {
@@ -39,7 +41,7 @@ public class Dayclose {
 	}
 
 
-
+	@ManyToOne
 	public String getBudget() {
 		return budget;
 	}
